@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flight Reservation Form</title>
+</head>
+<body>
+	<h1>Flight Reservation Form</h1>
+	<form id="reservation-form">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br>
+
+		<label for="from">From:</label>
+		<input type="text" id="from" name="from" required><br>
+
+		<label for="to">To:</label>
+		<input type="text" id="to" name="to" required><br>
+
+		<label for="depart-date">Departure Date:</label>
+		<input type="date" id="depart-date" name="depart-date" required><br>
+
+		<button type="submit">Submit</button>
+	</form>
+
+	<script>
+		const form = document.getElementById("reservation-form");
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			const name = form.elements["name"].value;
+			const from = form.elements["from"].value;
+			const to = form.elements["to"].value;
+			const departDate = form.elements["depart-date"].value;
+
+			// 예약 정보를 보내는 코드 작성
+
+			alert("Reservation submitted successfully!");
+			form.reset();
+		});
+	</script>
+</body>
+</html>
