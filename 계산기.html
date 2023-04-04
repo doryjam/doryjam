@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<title>계산기</title>
+<style>
+    button{
+        width: 50px;
+        height: 30px;
+        font-size: 15px;
+    }
+    #result{
+        width: 218px;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 24px;
+        text-align: right;
+    }
+</style>
+</head>
+<body>
+<h3>계산기</h3>
+<div>
+    <input type="text" id="result" readonly>
+    <br>
+    <button onclick="backspace()">Back</button>
+    <button onclick="operate('%')">%</button>
+    <button onclick="operate('/')">/</button>
+    <button onclick="addDigit(null)">c</button>
+    <br>
+    <button onclick="addDigit(7)">7</button>
+    <button onclick="addDigit(8)">8</button>
+    <button onclick="addDigit(9)">9</button>
+    <button onclick="operate('*')">*</button>
+    <br>
+    <button onclick="addDigit(4)">4</button>
+    <button onclick="addDigit(5)">5</button>
+    <button onclick="addDigit(6)">6</button>
+    <button onclick="operate('-')">-</button>
+    <br>
+    <button onclick="addDigit(1)">1</button>
+    <button onclick="addDigit(2)">2</button>
+    <button onclick="addDigit(3)">3</button>
+    <button onclick="operate('+')">+</button>
+    <br>
+    <button onclick="addDigit('0')">0</button>
+    <button onclick="addDigit('.')">.</button>
+    <button onclick="calculateResult()">=</button>
+    <button onclick="addDigit(null)">NONE</button>
+</div>
+<script>
+    let result = document.getElementById("result");
+    let hasDecimal = false;
+
+    function addDigit(digit){
+        if(digit ===null){
+            result.value='';
+            hasDecimal=false;
+        }else if(digit==="."){
+            if(!hasDecimal){
+                reslut.value += digit;
+                hasDecimal=true;
+            }
+        }else{
+            result.value+=digit;
+        }
+    }
+
+     function addDecimal(){
+        if(!hasDecimal){
+            result.value += ".";
+            hasDecimal = true;
+        }
+    }
+
+    function backspace(){
+        result.value = result.value.slice(0,-1);
+    }
+
+    function calculateResult(){
+        try{
+            result.value = eval(result.value);
+        }catch(error){
+            result.value="Error";
+        }
+    }
+
+    function operate(operator){
+        result.value += " " + operator + " ";
+        hasDecimal = false;
+    }
+</script>
+</body>
+</html>    
