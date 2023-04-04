@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>마우스 클릭</title>
+    <style>
+      td {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+		let tds;
+		let prevIndex = 0, index = 0;
+		window.onload = function() {
+			tds = document.getElementsByTagName("td");
+			tds[index].style.backgroundColor = "yellow";
+			for (let i = 0; i < tds.length; i++) {
+				tds[i].addEventListener("click", function() {
+					if (tds[i].style.backgroundColor == "yellow") {
+						tds[i].style.backgroundColor = "";
+					}
+				});
+			}
+			document.addEventListener("click", function() {
+				tds[prevIndex].style.backgroundColor = "";
+				let randomIndex = Math.floor(Math.random() * 100);
+				index = randomIndex;
+				tds[index].style.backgroundColor = "yellow";
+				prevIndex = index;
+			});
+		}
+		window.onkeydown = function(e) {
+			switch (e.key) {
+				case "ArrowDown":
+					if (index / 10 >= 9) return;
+					index += 10;
+					break;
+				case "ArrowUp":
+					if (index / 10 < 1) return;
+					index -= 10;
+					break;
+				case "ArrowLeft":
+					if (index % 10 == 0) return;
+					index--;
+					break;
+				case "ArrowRight":
+					if (index % 10 == 9) return;
+					index++;
+					break;
+			}
+			tds[index].style.backgroundColor = "yellow";
+			tds[prevIndex].style.backgroundColor = "";
+			prevIndex = index;
+		}
+	</script>
+  </head>
+  <body>
+    <table>
+      <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+        <tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+    </script>
+  </body>
+</html>
