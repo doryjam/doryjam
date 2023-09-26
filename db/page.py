@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 # MySQL 데이터베이스 연결 정보 설정
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://test:1234@localhost/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://test:tiger@localhost/test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # 데이터베이스 연동 설정 초기화
