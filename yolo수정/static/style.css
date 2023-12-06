@@ -1,0 +1,205 @@
+/* CSS for styling the page */
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 25px;
+    padding: 0; 
+    background-image: url('https://cdn.news.unn.net/news/photo/202207/530657_335316_530.jpg'); /* 이미지 파일의 경로를 지정하세요 */
+    background-size: cover; /* 이미지가 전체 화면에 맞게 조정됩니다. */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom; /* 이미지를 가운데로 정렬합니다. */
+    
+}
+
+
+.image-container img {
+    width: 100%; /* 이미지의 가로 폭을 100%로 설정하여 전체 화면으로 확장합니다. */
+    height: 50%;
+    display: block;
+  
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.upload-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center horizontally */
+    justify-content: center; /* Center horizontally (added) */
+}
+
+/* Adjust to make the file input field visible */
+.upload-section input[type="file"] {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgb(248, 246, 246); /* 검은색 배경 */
+    color: rgb(8, 8, 8); /* 흰색 글자 */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    
+}
+
+.upload-section input[type="file"]:hover {
+    background-color: darkgray; /* 마우스 호버 시 배경 색상 변경 */
+}
+
+/* 결과보기 버튼 스타일 (예시) */
+.result-button {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(250, 247, 247); /* 검은색 배경 */
+    color: rgb(10, 10, 10); /* 흰색 글자 */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    
+}
+
+.result-button:hover {
+    background-color: darkgray; /* 마우스 호버 시 배경 색상 변경 */
+}
+
+
+.upload-section label {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-section label:hover {
+    background-color: #2980b9;
+}
+
+.detected-objects-section {
+    margin-top: 20px; /* 상단 여백을 뷰포트 높이(화면 높이)의 백분율로 조정 */
+    background-color: #fff;
+    padding: 20px; /* 패딩을 뷰포트 너비(화면 너비)의 백분율로 조정 */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 800px; /* 최대 너비를 뷰포트 너비(화면 너비)의 백분율로 조정 */
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.detected-objects-section h2 {
+    font-size: 24px; /* 변경된 부분 */
+    color: #333;
+}
+
+
+.detected-objects-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detected-objects-section li {
+    font-size: 18px;
+    color: #333;
+}
+
+.detected-objects-section span {
+    display: inline-block;
+    width: 50%;
+}
+
+.uploaded-image {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* 그림자 효과에 트랜지션 추가 */
+}
+
+.logo:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 마우스를 올릴 때 그림자 효과 추가 */
+    background-color: #2980b9;
+}
+
+
+.home-button:hover {
+    background-color: #058cfa;
+}
+
+.home-button {
+    top: 20px; /* 뷰포트 높이(화면 높이)의 백분율로 top 위치 조정 */
+    left: 90px; /* 뷰포트 너비(화면 너비)의 백분율로 left 위치 조정 */
+    background-color: #fff;
+    color: #141313;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+.save-button:hover {
+    background-color: #45a049; /* 배경 색상 변경 */
+}
+
+/* 이미지 저장 버튼 스타일 */
+.save-button {
+    float: right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px; /* 버튼 너비를 20px로 조절 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 게시물 작성하기 버튼 스타일 */
+.post-button {
+    float: right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px; /* 버튼 너비를 20px로 조절 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: small;
+}
+

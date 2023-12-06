@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>새로운 게시물 작성</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='create.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>새로운 게시물 작성</h1>
+        <form method="POST" action="/create" enctype="multipart/form-data">
+            <label for="title">제목:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <label for="content">내용:</label><br>
+            <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
+            <label for="image">이미지 업로드:</label><br>
+            <input type="file" name="image" id="image" accept="image/*"><br>
+            <label for="author">작성자:</label>
+            <input type="text" name="author" id="author" required><br>
+            <label for="password">비밀번호:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <br>
+            <button type="submit">작성</button>
+        </form>
+    </div>
+</body>
+</html>

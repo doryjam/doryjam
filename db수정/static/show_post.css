@@ -1,0 +1,238 @@
+body, h1, h2, h3, p, ul, ol, li, table, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+table {
+    flex: 3;
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.comment-form input[type="text"] {
+    width: 50%;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 380px;
+}
+
+.comment-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+.comment-date {
+    margin-right: 10px; /* 오른쪽 여백 추가 */
+}
+
+.delete-button {
+    background-color: transparent;
+    color: #f00;
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.search-form {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.home-button {
+    padding: 20px 30px;
+    background-color: #333; /* 배경 색상 지정 */
+    color: #fff; /* 글자 색상 지정 */
+    text-decoration: none; /* 밑줄 제거 */
+    border-radius: 5px; /* 모서리 둥글게 만들기 */
+    margin-right: 10px; /* 오른쪽 여백 추가 */
+}
+
+/* 홈 버튼 호버(마우스 오버) 스타일 */
+.home-button:hover {
+    background-color: #042344; /* 호버 시 배경 색상 변경 */
+}
+.post-content {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 20px;
+    text-align: center; /* 내용을 가운데 정렬 */
+    width: 60%; /* 내용의 너비를 테이블과 일치시킴 */
+    margin: 0 auto; /* 내용을 수평 가운데 정렬 */
+}
+.delete-form {
+    text-align: right; /* 오른쪽 정렬 */
+} 
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    margin-right: 10px;
+}
+
+.delete-comment-form {
+    display: flex;
+    align-items: center;
+}
+
+.delete-comment-form input[type="password"] {
+    width: 120px;
+    margin-right: 10px;
+}
+
+
+.delete-button {
+    margin-top: 0px; /* 위쪽 마진 추가 */
+}
+
+back-button {
+    float: right; /* 우측 정렬 */
+    font-size: 12px; /* 글자 크기 조정 */
+    margin-top: 10px; /* 위쪽 마진 추가 */
+}
+
+table {
+    margin: 0 auto; /* 테이블 가운데 정렬 */
+    text-align: center;
+    width: 60%; /* 테이블 너비 지정 */
+}
+h3{
+    margin-left: 380px;
+}
+ul {
+    text-align: right; /* 오른쪽 정렬 */
+    margin-top: 10px; /* 위쪽 마진 추가 */
+    margin-left: 380px;
+}
+li {
+    display: flex; /* 요소들을 가로로 나란히 배치 */
+    align-items: center; /* 요소들을 수직 가운데 정렬 */
+    margin-bottom: 10px; /* 요소들 간의 간격 설정 */
+}
+#show-comment-form-button {
+    margin-right: 10px; /* 오른쪽으로 10px 이동 */
+}
+.edit-button{
+    background-color: transparent;
+    color: #f00;
+    border: none;
+    padding: 0;
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+    text-align: right; 
+}
+.edit-button:hover{
+    text-decoration: underline; 
+}

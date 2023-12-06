@@ -1,0 +1,23 @@
+<!-- templates/search_results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>검색 결과</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+</head>
+<body>
+    <h1>검색 결과</h1>
+    <ul>
+        {% if posts %}
+            {% for post in posts %}
+                <li>
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.content }}</p>
+                </li>
+            {% endfor %}
+        {% else %}
+            <p>검색 결과가 없습니다.</p>
+        {% endif %}
+    </ul>
+</body>
+</html>

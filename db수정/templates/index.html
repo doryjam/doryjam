@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>게시판</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <a href="http://13.124.167.33" class="home-button">홈</a>
+        <h1>게시판</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table class="post-list">
+        <thead>
+            <tr>
+                <th>글 번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                    <td>{{ post.id }}</td>
+                    <td>
+                        <a href="/view/{{ post.id }}">{{ post.title }}</a>
+                    </td>
+                    <td>{{ post.author }}</td>
+                    <td>{{ post.created_at }}</td>
+                    <td>{{ post.views }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/create" class="btn">게시물 작성</a>
+    <form action="/search" method="POST" class="search-form">
+        <input type="text" name="keyword" class="search-input" placeholder="검색어 입력">
+        <button type="submit" class="search-button">검색</button>
+    </form>
+</body>
+</html>
